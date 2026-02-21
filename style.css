@@ -88,3 +88,11 @@ button:hover{
     border-radius:10px;
     display:none;
 }
+
+.editor{
+    text-align:center;
+    width:60%;
+    margin:auto;
+    padding:20px;
+}
+
