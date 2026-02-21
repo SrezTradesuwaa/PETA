@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First Website</title>
+<style>
+
+body{
+font-family:Arial;
+background:#f4f4f4;
+text-align:center;
+margin:40px;
+}
+
+.editor{
+background:white;
+padding:20px;
+border-radius:10px;
+min-height:200px;
+}
+
+img{
+max-width:300px;
+display:block;
+margin:auto;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>My First Website</h1>
+
+<button onclick="addImage()">Upload Image</button>
+
+<div contenteditable="true" class="editor">
+You can edit this text.
+</div>
+
+<input type="file" id="imgUpload" hidden>
+
+<script>
+
+function addImage(){
+
+document.getElementById("imgUpload").click();
+
+}
+
+document.getElementById("imgUpload").addEventListener("change",function(){
+
+let file=this.files[0];
+let reader=new FileReader();
+
+reader.onload=function(e){
+
+let img=document.createElement("img");
+img.src=e.target.result;
+
+document.querySelector(".editor").appendChild(img);
+
+}
+
+reader.readAsDataURL(file);
+
+});
+
+</script>
+
+</body>
+</html>
