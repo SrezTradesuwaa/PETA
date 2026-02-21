@@ -75,3 +75,16 @@ button:hover{
     margin-top:15px;
     border-radius:8px;
 }
+
+.slideshow{
+    width:80%;
+    max-width:900px;
+    margin:40px auto;
+    position:relative;
+}
+
+.slide{
+    width:100%;
+    border-radius:10px;
+    display:none;
+}
