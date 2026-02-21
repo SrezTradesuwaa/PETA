@@ -1,0 +1,77 @@
+/* General page style */
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    
+    /* Background image */
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* Dark overlay so text is readable */
+
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.4);
+    z-index:-1;
+}
+
+
+/* Main title */
+
+h1{
+    text-align:center;
+    color:white;
+    margin-top:40px;
+}
+
+
+/* Editor box */
+
+.editor{
+    background:white;
+    width:60%;
+    margin:auto;
+    padding:25px;
+    border-radius:12px;
+    min-height:200px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+
+/* Upload button */
+
+button{
+    display:block;
+    margin:20px auto;
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    background:#4CAF50;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#45a049;
+}
+
+
+/* Images inside editor */
+
+.editor img{
+    max-width:100%;
+    margin-top:15px;
+    border-radius:8px;
+}
