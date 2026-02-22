@@ -89,3 +89,42 @@ width:95%;
 }
 
 }
+
+
+/* Description box */
+
+.description-box{
+
+width:90%;
+max-width:900px;
+
+margin:20px auto;
+
+background:white;
+padding:25px;
+
+border-radius:12px;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+
+text-align:center;
+
+}
+
+/* Title inside description */
+
+.description-box h2{
+
+margin-top:0;
+font-size:24px;
+
+}
+
+/* Text */
+
+.description-box p{
+
+font-size:16px;
+line-height:1.6;
+
+}
