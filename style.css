@@ -223,3 +223,7 @@ width:90%;
 margin:40px auto;
 border-radius:12px;
 }
+
+html{
+scroll-behavior:smooth;
+}
