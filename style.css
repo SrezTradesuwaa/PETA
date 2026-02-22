@@ -48,51 +48,44 @@ h1{
     box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
-
-/* Upload button */
-
-button{
-    display:block;
-    margin:20px auto;
-    padding:10px 20px;
-    border:none;
-    border-radius:8px;
-    background:#4CAF50;
-    color:white;
-    font-size:16px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:#45a049;
-}
-
-
-/* Images inside editor */
-
-.editor img{
-    max-width:100%;
-    margin-top:15px;
-    border-radius:8px;
-}
+/* Slideshow container */
 
 .slideshow{
-    width:80%;
+    width:90%;
     max-width:900px;
     margin:40px auto;
     position:relative;
 }
 
+/* Slides */
+
 .slide{
     width:100%;
-    border-radius:10px;
+    height:auto;
     display:none;
+    border-radius:12px;
 }
 
-.editor{
+/* Title */
+
+h1{
     text-align:center;
-    width:60%;
-    margin:auto;
-    padding:20px;
+    color:white;
+    font-size:28px;
+    padding:10px;
 }
 
+/* Mobile adjustment */
+
+@media screen and (max-width:600px){
+
+h1{
+font-size:20px;
+padding:10px;
+}
+
+.slideshow{
+width:95%;
+}
+
+}
