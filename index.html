@@ -5,11 +5,15 @@
 
 <title>PETA PEMUTERAN ECOTOURISM AND AGROTOURISM</title>
 
-<link rel="stylesheet" href="style.css">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="stylesheet" href="style.css">
+
+<!-- Leaflet map CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
 </head>
+
 
 <body>
 
@@ -89,7 +93,7 @@ locations that visitors can explore.
 
 <h2>Interactive Tourism Map</h2>
 
-<p>Map of ecotourism and agrotourism destinations will be displayed here.</p>
+<div id="map"></div>
 
 </section>
 
@@ -103,8 +107,14 @@ locations that visitors can explore.
 </footer>
 
 
+<!-- Leaflet map JavaScript -->
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 
 <script>
+
+/* Slideshow */
 
 let slideIndex = 0;
 
@@ -130,7 +140,34 @@ setTimeout(showSlides, 4000);
 
 showSlides();
 
+
+/* Map */
+
+var map = L.map('map').setView([-8.1413,114.6766], 13);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+maxZoom:19,
+attribution:'© OpenStreetMap'
+}).addTo(map);
+
+
+/* Example tourism markers */
+
+L.marker([-8.1413,114.6766])
+.addTo(map)
+.bindPopup("<b>Pemuteran Beach</b><br>Beautiful snorkeling and coral reefs.");
+
+L.marker([-8.1385,114.6745])
+.addTo(map)
+.bindPopup("<b>Coral Restoration Project</b><br>Community marine conservation.");
+
+L.marker([-8.1450,114.6810])
+.addTo(map)
+.bindPopup("<b>Local Vineyard</b><br>Agrotourism grape plantation.");
+
+
 </script>
 
 </body>
+
 </html>
